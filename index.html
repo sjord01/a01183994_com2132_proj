@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+    author:     Sam
+    version:    1.0
+    comments:   for COMP 2312 - Final Project
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/styles.scss">
+    <title>Hangman Game</title>
+
+    <script type="module" src="src/javascript/hangman-game.js" defer></script>
+
+</head>
+
+<body>
+    <div class="wrapper-body">
+        <header class="primary-header flex">
+            <h2>Hangman</h2>
+        </header>
+
+        <main>
+            <section class="grid"> 
+                <div id="game-header">
+                    <h1>Hangman</h1>
+                    <p>Hangman is a guessing game for two or more players. One person thinks of a word, phrase, or sentence, and the others guess letters. For every wrong guess, a stick figure gets closer to its doom. Originally played with pen and paper, now it's a digital game that makes you question why you guessed Q.
+                    </p>
+                </div> 
+                <aside role="presentation" id="game-pic">
+                    <img src="./src/assets/images/hangman-banner-pic.jpg" alt="Hangman Game State">
+                </aside>
+            </section>
+
+            <section id="game-container">
+                <div id="word-display"></div>
+                <div id="word-hint"></div>
+                <div id="hangman-drawing"></div>
+                <div id="guessed-letters"></div>
+                <div id="message"></div>
+                <div class="grid">
+                    <div class="flex" id="keyboard"></div>
+                    <aside id="hangman-pic">
+                        <img src="./src/assets/images/hangman-pic-0.jpg" alt="Hangman">
+                    </aside>
+                </div>
+                <button id="new-game-btn">New Game</button>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

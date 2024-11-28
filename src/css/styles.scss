@@ -1,0 +1,341 @@
+@import 'meyerweb-css-reset.scss';
+@import 'base-styles.scss';
+
+.flex {
+    display: flex;
+    gap: 2rem;
+}
+
+.axsblty {
+    clip: rect(1px,1px,1px,1px);
+    border: 0 !important;
+    height: 1px !important;
+    overflow: hidden;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+    border-bottom: 1px solid var(--grey-01);
+    justify-content: flex-start;
+    background-color: var(--white-primary);
+    padding-top: 1.75rem;
+}
+
+/* BUTTONS */
+
+button {
+    font-family: var(--secondary-font-regular);
+    background-color: var(--light-blue-02);
+    padding: 0.75rem 2.75rem;
+    border-style: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    transform: scale(1);
+}
+
+.btn-main {
+    font-size: 1.15rem;
+}
+
+#btn-form {
+    transition: transform 0.1s ease-in-out;
+    transform: scale(1);
+}
+
+.btn-main:hover, #btn-form:hover {
+    background-color: var(--orange-01);
+}
+
+.btn-main:active, #btn-form:active {
+    transform: scale(0.95);
+}
+
+/* MAIN BODY */
+
+.wrapper-body {
+    max-width: 1000px;
+    margin: 0 auto; /* Centers the body */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding: 0 1rem;
+}
+
+main {
+    width: 100%;
+    margin: 2rem 0 1rem;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var( --heading-font-bold);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+@mixin heading-size($font-size) {
+    font-size: $font-size;
+    line-height: calc(#{$font-size} + 4px);
+  }
+  
+
+  h1 {
+    @include heading-size(1.5rem);
+  }
+  
+  h2 {
+    @include heading-size(1.25rem);
+  }
+  
+  h3 {
+    @include heading-size(1.325rem);
+  }
+  
+  h4 {
+    @include heading-size(1.25rem);
+  }
+  
+  h5 {
+    @include heading-size(1.15rem);
+  }
+  
+  h6 {
+    @include heading-size(1rem);
+  }
+
+p {
+    font-size: 1rem;
+    line-height: calc(1rem + 4px);
+    margin-bottom: 0.625rem;
+    letter-spacing: 0.125em;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto; /* Add auto rows to accommodate multiple rows */
+    gap: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.txt-blue {
+    color: var(--blue-01);
+    font-family: var(--main-font-medium);
+}
+
+.txt-red {
+    color: var(--orange-01);
+    font-family: var(--main-font-medium);
+}
+
+.wrapper-article {
+    border: 1px solid var(--grey-01);
+    border-radius: 8px;
+    padding: 1.75rem 1rem 1rem;
+}
+
+input, li {
+    font-family: var(--secondary-font-regular);
+}
+
+li {
+    font-size: 1rem;
+    line-height: calc(1rem + 4px);
+    margin: 1rem 0 1rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 3rem;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/circle-ok.svg);
+    background-position: left 0.5rem top 0.5rem;
+}
+
+/* HANGMAN GAME */
+#keyboard, #game-header {
+    grid-area: 1 / 1 / 1 / -1;
+}
+
+#game-pic, #hangman-pic {
+    grid-area: 2 / 1 / 2 / -1;
+}
+
+
+#word-display {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.15rem; 
+    margin-bottom: 1.5rem;
+}
+
+#word-display span {
+    width: 2.5rem;
+    text-align: center;
+    border: 2px solid var(--blue-01);
+    border-radius: 4px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#word-display span.guessed {
+    color: #000;
+}
+
+#word-display span.unguessed {
+    color: transparent;
+}
+
+#keyboard {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+#keyboard > button {
+    width: 2rem;
+    text-align: center;
+    border: 2px solid var(--blue-01);
+    border-radius: 4px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+}
+
+#game-pic > img {
+    height: 240px;
+    object-fit: contain;
+}
+
+#hanman-pic > img {
+    height: 120px;
+    object-fit: contain;
+}
+
+#new-game-btn {
+    margin-top: 1.5rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@media (min-width: 767px) { 
+
+     /* MAIN BODY */
+     main {
+        margin: 4rem 0;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        line-height: calc(1.75rem + 4px);
+    }
+    
+    h2 {
+        font-size: 1.675rem;
+        line-height: calc(1.675rem + 4px);
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+        line-height: calc(1.5rem + 4px);
+    }
+    
+    h4 {
+        font-size: 1.325rem;
+        line-height: calc(1.325rem + 4px);
+    }
+    
+    h5 {
+        font-size: 1.25rem;
+        line-height: calc(1.25rem + 4px);
+    }
+
+    p {
+        font-size: 1.15rem;
+        line-height: calc(1.15rem + 4px);
+    }
+
+    /* HANGMAN GAME */
+    #keyboard, #game-header {
+        grid-area: 1 / 1 / 1 / 9;
+    }
+    
+    #game-pic, #hangman-pic {
+        grid-area: 1 / 9 / 1 / -1;
+    }
+
+    #word-display {
+        font-size: 1.25rem; 
+    }
+
+    #hanman-pic > img {
+        height: auto;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    /* MAIN BODY */
+    main {
+        margin: 6rem 0;
+    }
+
+    h1 {
+        @include heading-size(4rem);
+    }
+    
+    h2 {
+        @include heading-size(3rem);
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+        line-height: calc(1.5rem + 4px);
+    }
+
+    h4 {
+        font-size: 1.425rem;
+        line-height: calc(1.425rem + 4px);
+    }
+    
+    h5 {
+        font-size: 1.325rem;
+        line-height: calc(1.325rem + 4px);
+    }
+
+    p {
+        font-size: 1.25rem;
+        line-height: calc(1.25rem + 4px);
+    }
+
+    /* HANGMAN GAME */
+    #word-display {
+        font-size: 1.5rem; 
+    }
+}
