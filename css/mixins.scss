@@ -1,0 +1,54 @@
+$heading-font-bold: 'Sharpie-Bold', sans-serif;
+
+@font-face {
+    font-family: 'Sharpie-Bold';
+    src: url('../assets/fonts/Sharpie-Bold.woff2') format('woff2'),
+         url('../assets/fonts/Sharpie-Bold.woff') format('woff'),
+         url('../assets/fonts/Sharpie-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@mixin heading-styles {
+    font-family: $heading-font-bold;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include heading-styles;
+}
+
+@mixin heading-size($font-size) {
+    font-size: $font-size;
+    line-height: calc(#{$font-size} + 4px);
+}
+  
+  h1 {
+    @include heading-size(2rem);
+  }
+  
+  h2 {
+    @include heading-size(1.5rem);
+  }
+
+@media (min-width: 767px) { 
+    h1 {
+        @include heading-size(4rem);
+    }
+    
+    h2 {
+        @include heading-size(3rem);
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        @include heading-size(4.5rem);
+    }
+    
+    h2 {
+        @include heading-size(3.5rem);
+    }
+}

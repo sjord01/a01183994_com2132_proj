@@ -1,6 +1,6 @@
 @import url(./meyerweb-css-reset.css);
 @import url(./base-styles.css);
-@import "mixins.scss";
+@import "mixins";
 
 
 .flex {
@@ -80,6 +80,7 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
+/*
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font-bold);
     letter-spacing: 0.1em;
@@ -95,26 +96,7 @@ h2 {
     font-size: 1.25rem;
     line-height: calc(1.25rem + 4px);
 }
-
-h3 {
-    font-size: 1.325rem;
-    line-height: calc(1.325rem + 4px);
-}
-
-h4 {
-    font-size: 1.25rem;
-    line-height: calc(1.25rem + 4px);
-}
-
-h5 {
-    font-size: 1.15rem;
-    line-height: calc(1.15rem + 4px);
-}
-
-h6 {
-    font-size: 1rem;
-    line-height: calc(1rem + 4px);
-}
+*/
 
 p {
     font-size: 1rem;
@@ -252,6 +234,7 @@ li {
         margin: 4rem 0;
     }
 
+    /*
     h1 {
         font-size: 1.75rem;
         line-height: calc(1.75rem + 4px);
@@ -261,21 +244,7 @@ li {
         font-size: 1.675rem;
         line-height: calc(1.675rem + 4px);
     }
-    
-    h3 {
-        font-size: 1.5rem;
-        line-height: calc(1.5rem + 4px);
-    }
-    
-    h4 {
-        font-size: 1.325rem;
-        line-height: calc(1.325rem + 4px);
-    }
-    
-    h5 {
-        font-size: 1.25rem;
-        line-height: calc(1.25rem + 4px);
-    }
+    */
 
     p {
         font-size: 1.15rem;
@@ -308,8 +277,9 @@ li {
         margin: 6rem 0;
     }
 
+    /*
     h1 {
-        font-size: 2rem;
+        font-size: 4rem;
         line-height: calc(2rem + 4px);
     }
     
@@ -317,22 +287,7 @@ li {
         font-size: 1.75rem;
         line-height: calc(1.75rem + 4px);
     }
-    
-    h3 {
-        font-size: 1.5rem;
-        line-height: calc(1.5rem + 4px);
-    }
-
-    h4 {
-        font-size: 1.425rem;
-        line-height: calc(1.425rem + 4px);
-    }
-    
-    h5 {
-        font-size: 1.325rem;
-        line-height: calc(1.325rem + 4px);
-    }
-
+    */
     p {
         font-size: 1.25rem;
         line-height: calc(1.25rem + 4px);

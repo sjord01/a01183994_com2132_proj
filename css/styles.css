@@ -1,5 +1,6 @@
-@import 'meyerweb-css-reset.scss';
-@import 'base-styles.scss';
+@import url(./meyerweb-css-reset.css);
+@import url(./base-styles.css);
+
 
 .flex {
     display: flex;
@@ -78,41 +79,22 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: var( --heading-font-bold);
+    font-family: var(--heading-font-bold);
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
 }
 
-@mixin heading-size($font-size) {
-    font-size: $font-size;
-    line-height: calc(#{$font-size} + 4px);
-  }
-  
+h1 {
+    font-size: 2rem;
+    line-height: calc(1.5rem + 4px);
+}
 
-  h1 {
-    @include heading-size(1.5rem);
-  }
-  
-  h2 {
-    @include heading-size(1.25rem);
-  }
-  
-  h3 {
-    @include heading-size(1.325rem);
-  }
-  
-  h4 {
-    @include heading-size(1.25rem);
-  }
-  
-  h5 {
-    @include heading-size(1.15rem);
-  }
-  
-  h6 {
-    @include heading-size(1rem);
-  }
+h2 {
+    font-size: 1.5rem;
+    line-height: calc(1.25rem + 4px);
+}
 
 p {
     font-size: 1rem;
@@ -250,29 +232,15 @@ li {
         margin: 4rem 0;
     }
 
+    
     h1 {
-        font-size: 1.75rem;
+        font-size: 4rem;
         line-height: calc(1.75rem + 4px);
     }
     
     h2 {
-        font-size: 1.675rem;
+        font-size: 3rem;
         line-height: calc(1.675rem + 4px);
-    }
-    
-    h3 {
-        font-size: 1.5rem;
-        line-height: calc(1.5rem + 4px);
-    }
-    
-    h4 {
-        font-size: 1.325rem;
-        line-height: calc(1.325rem + 4px);
-    }
-    
-    h5 {
-        font-size: 1.25rem;
-        line-height: calc(1.25rem + 4px);
     }
 
     p {
@@ -307,26 +275,13 @@ li {
     }
 
     h1 {
-        @include heading-size(4rem);
+        font-size: 4.5rem;
+        line-height: calc(2rem + 4px);
     }
     
     h2 {
-        @include heading-size(3rem);
-    }
-    
-    h3 {
-        font-size: 1.5rem;
-        line-height: calc(1.5rem + 4px);
-    }
-
-    h4 {
-        font-size: 1.425rem;
-        line-height: calc(1.425rem + 4px);
-    }
-    
-    h5 {
-        font-size: 1.325rem;
-        line-height: calc(1.325rem + 4px);
+        font-size: 4rem;
+        line-height: calc(1.75rem + 4px);
     }
 
     p {
